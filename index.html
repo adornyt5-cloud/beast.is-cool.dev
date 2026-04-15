@@ -12,7 +12,6 @@
             margin: 0; padding: 0; background: #000;
             font-family: 'Inter', sans-serif;
             overflow: hidden; color: white;
-            /* Custom Cursor */
             cursor: url('https://media.discordapp.net/attachments/1233881524550635650/1489974800989425845/demon-slayer-kyojuro-rengoku-and-sword-cursor-pack_-_copia.png?ex=69dc41ea&is=69daf06a&hm=848c47965df7b5e690ff3552b2bc314c2b358be1d2b0893461891b053810a08a&=&format=webp&quality=lossless&width=32&height=32'), auto;
         }
 
@@ -23,8 +22,10 @@
         #bg-video {
             position: fixed; right: 0; bottom: 0;
             min-width: 100%; min-height: 100%;
-            z-index: -1; filter: brightness(0.3) contrast(1.1);
+            z-index: -1; 
+            filter: brightness(0.8) contrast(1.1); 
             object-fit: cover;
+            background-color: #050505;
         }
 
         #snow {
@@ -48,34 +49,27 @@
         }
 
         .profile-card {
-            background: rgba(10, 10, 10, 0.85); 
-            backdrop-filter: blur(25px) saturate(150%);
+            background: rgba(10, 10, 10, 0.65); 
+            backdrop-filter: blur(15px) saturate(160%);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 20px; 
             padding: 3.5rem 2.5rem; 
             width: 440px;
             text-align: center; 
-            box-shadow: 0 0 40px rgba(0, 0, 0, 0.9), 0 0 20px rgba(255, 0, 0, 0.05);
-            position: relative;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
         }
 
         .avatar-circle {
             width: 130px; height: 130px; border-radius: 50%;
             margin: -105px auto 1.5rem;
-            border: 2px solid rgba(255, 0, 0, 1);
-            box-shadow: 0 0 35px rgba(255, 0, 0, 0.6);
+            border: 2px solid #ff0000;
+            box-shadow: 0 0 35px rgba(255, 0, 0, 0.5);
             background: #000; overflow: hidden;
             display: flex; justify-content: center; align-items: center;
         }
 
         .avatar-circle img { width: 100%; height: 100%; object-fit: cover; }
-
-        .username {
-            font-size: 2.8rem; font-weight: 700; color: #fff;
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-            position: relative;
-        }
-
+        .username { font-size: 2.8rem; font-weight: 700; color: #fff; text-shadow: 0 0 20px rgba(255, 255, 255, 0.2); }
         .username:hover { animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite; }
 
         @keyframes glitch {
@@ -88,9 +82,7 @@
         }
 
         .typing-text { min-height: 20px; color: #ccc; margin-bottom: 1.5rem; }
-
         .cursor { display: inline-block; width: 8px; background-color: white; margin-left: 2px; animation: blink 1s infinite; }
-
         @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 
         .discord-card {
@@ -102,32 +94,11 @@
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .discord-avatar { 
-            width: 52px; height: 52px; border-radius: 50%; 
-            border: 2px solid rgba(255, 0, 0, 0.5);
-            overflow: hidden; 
-        }
-
+        .discord-avatar { width: 52px; height: 52px; border-radius: 50%; border: 2px solid rgba(255, 0, 0, 0.5); overflow: hidden; }
         .v3nx-tag {
-            display: inline-flex;
-            align-items: center;
-            background: rgba(45, 45, 45, 0.8);
-            border-radius: 10px;
-            padding: 2px 8px;
-            margin-left: 8px;
-            font-size: 11px;
-            font-weight: 700;
-            color: #fff;
-            vertical-align: middle;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            gap: 4px;
-        }
-
-        .v3nx-tag .emoji {
-            font-size: 1.2em;
-            line-height: 1;
-            position: relative;
-            top: -1px;
+            display: inline-flex; align-items: center; background: rgba(45, 45, 45, 0.8);
+            border-radius: 10px; padding: 2px 8px; margin-left: 8px;
+            font-size: 11px; font-weight: 700; color: #fff; border: 1px solid rgba(255, 255, 255, 0.1); gap: 4px;
         }
 
         .discord-link { display: inline-block; transition: transform 0.3s ease; filter: drop-shadow(0 0 5px rgba(88, 101, 242, 0.5)); }
@@ -143,18 +114,18 @@
 
     <canvas id="snow"></canvas>
 
-    <video autoplay muted loop id="bg-video">
-        <source src="https://r2.guns.lol/bca3f103-5891-4c26-be85-0447e5ae5e98.mp4" type="video/mp4">
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="https://r2.guns.lol/5ee8eb36-c430-4e87-a55a-cf0ae2a92e56.mp4" type="video/mp4">
     </video>
 
     <audio id="audio-player" loop>
-        <source src="https://file.garden/adjw67n9rzWH8vA2/1nonly_-_VICODIN_OFFICIAL_MUSIC_VIDEO_dir._by_noahsocold_128KBPS.m4a" type="audio/mpeg">
+        <source src="https://file.garden/adjw67n9rzWH8vA2/Alex%20Warren%20-%20Ordinary%20(Lyrics)%20256kbps.webm" type="audio/webm">
     </audio>
 
     <div class="main-wrapper">
         <div class="profile-card">
             <div class="avatar-circle">
-                <img src="https://r2.guns.lol/6d29ebc7-629a-407f-be48-bbbc2e3d3632.gif" alt="beast gif avatar">
+                <img src="https://media.discordapp.net/attachments/1233881503923179572/1493328552710373536/7d9387423f1b64135fa4a984e49fc4e1.png?ex=69dfe397&is=69de9217&hm=f26bec89dfefb9be204232894471deceb6d32124e4c49db418090ef8c58f23b5&=&format=webp&quality=lossless&width=800&height=800" alt="beast avatar">
             </div>
             
             <h1 class="username">beast.dev</h1>
@@ -198,7 +169,6 @@
         const canvas = document.getElementById('snow');
         const ctx = canvas.getContext('2d');
         let width, height, particles = [];
-
         function initSnow() {
             width = window.innerWidth; height = window.innerHeight;
             canvas.width = width; canvas.height = height;
@@ -207,7 +177,6 @@
                 particles.push({ x: Math.random() * width, y: Math.random() * height, r: Math.random() * 1.5 + 0.5, v: Math.random() * 0.5 + 0.2 });
             }
         }
-
         function drawParticles() {
             ctx.clearRect(0, 0, width, height);
             ctx.fillStyle = "rgba(255, 255, 255, 0.4)";
@@ -220,21 +189,19 @@
             ctx.fill();
             updateParticles();
         }
-
         function updateParticles() {
             for (let i = 0; i < particles.length; i++) {
                 let p = particles[i]; p.y += p.v;
                 if (p.y > height) { p.y = -10; p.x = Math.random() * width; }
             }
         }
-
         function animateSnow() { drawParticles(); requestAnimationFrame(animateSnow); }
         window.addEventListener('resize', initSnow);
         initSnow(); animateSnow();
 
         const textElement = document.getElementById('typewriter');
         const phrases = ["Bypassin limits...", "Scriptin my own reality", "Buildin the future", "Python Developer"];
-        let phraseIndex = 0; let charIndex = 0; let isDeleting = false; let typeSpeed = 100;
+        let phraseIndex = 0, charIndex = 0, isDeleting = false, typeSpeed = 100;
 
         function type() {
             const currentPhrase = phrases[phraseIndex];
@@ -245,7 +212,6 @@
                 textElement.textContent = currentPhrase.substring(0, charIndex + 1);
                 charIndex++; typeSpeed = 150;
             }
-
             if (!isDeleting && charIndex === currentPhrase.length) {
                 isDeleting = true; typeSpeed = 2000;
             } else if (isDeleting && charIndex === 0) {
@@ -256,18 +222,15 @@
 
         function startBeast() {
             const audio = document.getElementById('audio-player');
+            const video = document.getElementById('bg-video');
             const overlay = document.getElementById('entry-overlay');
+            
             audio.play().catch(e => console.log("Audio blocked"));
+            video.play().catch(e => console.log("Video blocked"));
+            
             overlay.classList.add('hidden');
             setTimeout(type, 1000);
         }
-
-        (function killFavicon() {
-            const newIcon = document.createElement('link');
-            newIcon.rel = 'shortcut icon';
-            newIcon.href = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lMREFUeNoBAgD9AgEAAAABAAExu/7UAAAAAElFTkSuQmCC';
-            document.head.appendChild(newIcon);
-        })();
     </script>
 </body>
 </html>
